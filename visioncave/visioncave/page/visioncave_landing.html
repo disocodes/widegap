@@ -1,0 +1,17 @@
+{% extends "app_page.html" %}
+{% set page_title = "VisionCave Landing Page" %}
+
+{% block page_content %}
+<div class="row">
+    {% for card in cards %}
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title"><i class="{{ card.icon }}"></i> {{ card.title }}</h5>
+                <a href="{{ card.link }}" class="btn btn-primary">Open</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
